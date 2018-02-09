@@ -168,7 +168,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 class="author">Alex Kordic</h2>
 <h2 class="author">Alexandr Kostrikov</h2>
 <h2 class="author">Alexander Spyridakis</h2>
-<h3 class="date">Version 2ad3ed2, Fri Feb 2 09:52:39 2018 +0100</h3>
+<h3 class="date">Version 468e72c, Wed Feb 7 16:36:18 2018 +0100</h3>
 </div>
 <div id="TOC">
 <ul>
@@ -1075,7 +1075,7 @@ worker w2: pid=21948 alive=true</code></pre>
 <p><em>Required</em>. The IPv4 address of this host; used to respond to requests and when making ARP requests.</p>
 <p>— Key <strong>next_mac</strong></p>
 <p><em>Optional</em>. The MAC address to which to send all network traffic. This ARP app currently hsa the limitation that it assumes that all traffic will go to a single MAC address. If this address is provided as part of the configuration, no ARP request will be made; otherwise it will be determined from the <em>next_ip</em> via ARP.</p>
-<p>— Key <strong>self_ip</strong></p>
+<p>— Key <strong>next_ip</strong></p>
 <p><em>Optional</em>. The IPv4 address of the next-hop host. Required only if <em>next_mac</em> is not specified as part of the configuration.</p>
 <p>— Key <strong>shared_next_mac_key</strong></p>
 <p><em>Optional</em>. Path to a shared memory location (i.e. <em>/var/run/snabb/PID/PATH</em>) in which to store the resolved next_mac. This ARP resolver might be part of a set of peer processes sharing work via RSS. In that case, an ARP response will probably arrive only to one of the RSS processes, not to all of them. If you are using ARP behind RSS, set <em>shared_next_mac_key</em> to, for example, <code>group/arp-next-mac</code>, to enable the different workers to communicate the next-hop MAC address.</p>

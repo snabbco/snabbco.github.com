@@ -26,10 +26,13 @@
   <meta name="author" content="Nicola tekNico Larosa" />
   <meta name="author" content="Antonio Nikishaev" />
   <meta name="author" content="Domen Kožar" />
+  <meta name="author" content="Peter Cawley" />
   <meta name="author" content="Alexander Altshuler" />
   <meta name="author" content="Rolf Sommerhalder" />
   <meta name="author" content="Timo Buhrmester" />
   <meta name="author" content="Pete Kazmier" />
+  <meta name="author" content="Dibyendu Majumdar" />
+  <meta name="author" content="Lesley De Cruz" />
   <meta name="author" content="Mikhail Nazarov" />
   <meta name="author" content="Kristian Larsson" />
   <meta name="author" content="Justin Cormack" />
@@ -41,6 +44,7 @@
   <meta name="author" content="Jeff Loughridge" />
   <meta name="author" content="Kacper Wysocki" />
   <meta name="author" content="Adrian Perez" />
+  <meta name="author" content="William Adams" />
   <meta name="author" content="Vladimir Fedin" />
   <meta name="author" content="Vincenzo Maffione" />
   <meta name="author" content="Tomas Korcak" />
@@ -49,7 +53,6 @@
   <meta name="author" content="Stevan Markovic" />
   <meta name="author" content="Simon Leinen" />
   <meta name="author" content="Ryan Hartlage" />
-  <meta name="author" content="Peter Cawley" />
   <meta name="author" content="Kristian Kielhofner" />
   <meta name="author" content="Jon Olsson" />
   <meta name="author" content="Jianbo Liu" />
@@ -59,6 +62,7 @@
   <meta name="author" content="Gernot Nusshall" />
   <meta name="author" content="Fabian Bonk" />
   <meta name="author" content="Edward Hope-Morley" />
+  <meta name="author" content="Darius Bacon" />
   <meta name="author" content="Ben Agricola" />
   <meta name="author" content="Anshul Makkar" />
   <meta name="author" content="Andy Chong" />
@@ -131,10 +135,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 class="author">Nicola ‘tekNico’ Larosa</h2>
 <h2 class="author">Antonio Nikishaev</h2>
 <h2 class="author">Domen Kožar</h2>
+<h2 class="author">Peter Cawley</h2>
 <h2 class="author">Alexander Altshuler</h2>
 <h2 class="author">Rolf Sommerhalder</h2>
 <h2 class="author">Timo Buhrmester</h2>
 <h2 class="author">Pete Kazmier</h2>
+<h2 class="author">Dibyendu Majumdar</h2>
+<h2 class="author">Lesley De Cruz</h2>
 <h2 class="author">Mikhail Nazarov</h2>
 <h2 class="author">Kristian Larsson</h2>
 <h2 class="author">Justin Cormack</h2>
@@ -146,6 +153,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 class="author">Jeff Loughridge</h2>
 <h2 class="author">Kacper Wysocki</h2>
 <h2 class="author">Adrian Perez</h2>
+<h2 class="author">William Adams</h2>
 <h2 class="author">Vladimir Fedin</h2>
 <h2 class="author">Vincenzo Maffione</h2>
 <h2 class="author">Tomas Korcak</h2>
@@ -154,7 +162,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 class="author">Stevan Markovic</h2>
 <h2 class="author">Simon Leinen</h2>
 <h2 class="author">Ryan Hartlage</h2>
-<h2 class="author">Peter Cawley</h2>
 <h2 class="author">Kristian Kielhofner</h2>
 <h2 class="author">Jon Olsson</h2>
 <h2 class="author">Jianbo Liu</h2>
@@ -164,13 +171,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 class="author">Gernot Nusshall</h2>
 <h2 class="author">Fabian Bonk</h2>
 <h2 class="author">Edward Hope-Morley</h2>
+<h2 class="author">Darius Bacon</h2>
 <h2 class="author">Ben Agricola</h2>
 <h2 class="author">Anshul Makkar</h2>
 <h2 class="author">Andy Chong</h2>
 <h2 class="author">Alex Kordic</h2>
 <h2 class="author">Alexandr Kostrikov</h2>
 <h2 class="author">Alexander Spyridakis</h2>
-<h3 class="date">Version 732eae9, Mon Jul 2 15:57:55 2018 +0200</h3>
+<h3 class="date">Version 6dbaca8, Wed Aug 1 13:57:51 2018 +0200</h3>
 </div>
 <div id="TOC">
 <ul>
@@ -573,6 +581,8 @@ local c = config.new()
 <p>Maps an existing shared object of <em>type</em> into memory via a hierarchical <em>name</em>. If <em>readonly</em> is non-nil the shared object is mapped in read-only mode. <em>Readonly</em> defaults to nil. Fails if the shared object does not already exist. Returns a pointer to the mapped object.</p>
 <p>— Function <strong>shm.alias</strong> <em>new-path</em> <em>existing-path</em></p>
 <p>Create an alias (symbolic link) for an object.</p>
+<p>— Function <strong>shm.path</strong> <em>name</em></p>
+<p>Returns the fully-qualified path for an object called <em>name</em>.</p>
 <p>— Function <strong>shm.exists</strong> <em>name</em></p>
 <p>Returns a true value if shared object by <em>name</em> exists.</p>
 <p>— Function <strong>shm.unmap</strong> <em>pointer</em></p>
@@ -2781,8 +2791,6 @@ end</code></pre>
 <p>Use the <code>SCHED_FIFO</code> real-time scheduler for the data-plane processes.</p>
 <p>— <strong>–on-ingress-drop</strong> <em>action</em></p>
 <p>If a data-plane process detects too many dropped packets (by default, 100K packets over 30 seconds), perform <em>action</em>. Available <em>action</em>s are <code>flush</code>, which tells Snabb to re-optimize the code; <code>warn</code>, which simply prints a warning and raises an alarm; and <code>off</code>, which does nothing.</p>
-<p>— <strong>-j</strong> <em>arg</em></p>
-<p>Enable profiling in the data-plane. Useful when you are trying to isolate a performance problem. It is thought that this will be reworked when Snabb switches to RaptorJIT, so we leave this somewhat complicated option undocumented at present :)</p>
 <h4 id="reconfiguration">Reconfiguration</h4>
 <p>The manager of a ptree-based Snabb network function also listens to configuration queries and updates on a local socket. The user-facing side of this interface is <a href="../config/README.md"><code>snabb config</code></a>. A <code>snabb config</code> user can address a local ptree network function by PID, but it’s easier to do so by name, so the above example passed <code>--name my-filter</code> to the <code>snabb ptree</code> invocation.</p>
 <p>For example, we can get the configuration of a running network function with <code>snabb config get</code>:</p>

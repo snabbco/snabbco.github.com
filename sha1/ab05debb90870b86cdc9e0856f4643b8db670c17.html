@@ -39,6 +39,7 @@
   <meta name="author" content="Christian Graf" />
   <meta name="author" content="Carlos Alberto Lopez Perez" />
   <meta name="author" content="Jeff Loughridge" />
+  <meta name="author" content="Ben Agricola" />
   <meta name="author" content="Kacper Wysocki" />
   <meta name="author" content="Adrian Perez" />
   <meta name="author" content="Vladimir Fedin" />
@@ -59,7 +60,6 @@
   <meta name="author" content="Gernot Nusshall" />
   <meta name="author" content="Fabian Bonk" />
   <meta name="author" content="Edward Hope-Morley" />
-  <meta name="author" content="Ben Agricola" />
   <meta name="author" content="Anshul Makkar" />
   <meta name="author" content="Andy Chong" />
   <meta name="author" content="Alex Kordic" />
@@ -144,6 +144,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 class="author">Christian Graf</h2>
 <h2 class="author">Carlos Alberto Lopez Perez</h2>
 <h2 class="author">Jeff Loughridge</h2>
+<h2 class="author">Ben Agricola</h2>
 <h2 class="author">Kacper Wysocki</h2>
 <h2 class="author">Adrian Perez</h2>
 <h2 class="author">Vladimir Fedin</h2>
@@ -164,13 +165,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 class="author">Gernot Nusshall</h2>
 <h2 class="author">Fabian Bonk</h2>
 <h2 class="author">Edward Hope-Morley</h2>
-<h2 class="author">Ben Agricola</h2>
 <h2 class="author">Anshul Makkar</h2>
 <h2 class="author">Andy Chong</h2>
 <h2 class="author">Alex Kordic</h2>
 <h2 class="author">Alexandr Kostrikov</h2>
 <h2 class="author">Alexander Spyridakis</h2>
-<h3 class="date">Version 732eae9, Mon Jul 2 15:57:55 2018 +0200</h3>
+<h3 class="date">Version ab05deb, Tue Jul 31 09:08:18 2018 +0000</h3>
 </div>
 <div id="TOC">
 <ul>
@@ -1836,6 +1836,7 @@ local total_sum = ipsum(data2, length2, bit.bnot(sum1))</code></pre>
 </ol>
 <ul>
 <li><code>min_occupancy_rate</code>: Minimum ratio of <code>occupancy/size</code>. Removing an entry from an “empty” table will shrink the table.</li>
+<li><code>resize_callback</code>: An optional function that is called after the table has been resized. The function is called with two arguments: the ctable object and the old size. By default, no callback is used.</li>
 </ul>
 <p>— Function <strong>ctable.load</strong> <em>stream</em> <em>parameters</em></p>
 <p>Load a ctable that was previously saved out to a binary format. <em>parameters</em> are as for <code>ctable.new</code>. <em>stream</em> should be an object that has a <strong>:read_ptr</strong>(<em>ctype</em>) method, which returns a pointer to an embedded instances of <em>ctype</em> in the stream, advancing the stream over the object; and <strong>:read_array</strong>(<em>ctype</em>, <em>count</em>) which is the same but reading <em>count</em> instances of <em>ctype</em> instead of just one.</p>

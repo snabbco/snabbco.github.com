@@ -34,10 +34,10 @@
   <meta name="author" content="Kristian Larsson" />
   <meta name="author" content="Justin Cormack" />
   <meta name="author" content="Felix Geißler" />
-  <meta name="author" content="R. Matthew Emerson" />
   <meta name="author" content="Michael G" />
   <meta name="author" content="Christian Graf" />
   <meta name="author" content="Carlos Alberto Lopez Perez" />
+  <meta name="author" content="R. Matthew Emerson" />
   <meta name="author" content="Jeff Loughridge" />
   <meta name="author" content="Kacper Wysocki" />
   <meta name="author" content="Adrian Perez" />
@@ -139,10 +139,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 class="author">Kristian Larsson</h2>
 <h2 class="author">Justin Cormack</h2>
 <h2 class="author">Felix Geißler</h2>
-<h2 class="author">R. Matthew Emerson</h2>
 <h2 class="author">Michael G</h2>
 <h2 class="author">Christian Graf</h2>
 <h2 class="author">Carlos Alberto Lopez Perez</h2>
+<h2 class="author">R. Matthew Emerson</h2>
 <h2 class="author">Jeff Loughridge</h2>
 <h2 class="author">Kacper Wysocki</h2>
 <h2 class="author">Adrian Perez</h2>
@@ -170,7 +170,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2 class="author">Alex Kordic</h2>
 <h2 class="author">Alexandr Kostrikov</h2>
 <h2 class="author">Alexander Spyridakis</h2>
-<h3 class="date">Version 732eae9, Mon Jul 2 15:57:55 2018 +0200</h3>
+<h3 class="date">Version c7d772c, Fri Jun 15 13:53:01 2018 +0200</h3>
 </div>
 <div id="TOC">
 <ul>
@@ -268,60 +268,55 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#virtionet-app-apps.virtio_net.virtio_net">VirtioNet App (apps.virtio_net.virtio_net)</a><ul>
 <li><a href="#configuration-15">Configuration</a></li>
 </ul></li>
-<li><a href="#pcap-savefile-apps">Pcap Savefile Apps</a><ul>
 <li><a href="#pcapreader-and-pcapwriter-apps-apps.pcap.pcap">PcapReader and PcapWriter Apps (apps.pcap.pcap)</a><ul>
 <li><a href="#configuration-16">Configuration</a></li>
 </ul></li>
-<li><a href="#tap-apps.pcap.tap">Tap (apps.pcap.tap)</a><ul>
+<li><a href="#rawsocket-app-apps.socket.raw">RawSocket App (apps.socket.raw)</a><ul>
 <li><a href="#configuration-17">Configuration</a></li>
 </ul></li>
-</ul></li>
-<li><a href="#rawsocket-app-apps.socket.raw">RawSocket App (apps.socket.raw)</a><ul>
+<li><a href="#unixsocket-app-apps.socket.unix">UnixSocket App (apps.socket.unix)</a><ul>
 <li><a href="#configuration-18">Configuration</a></li>
 </ul></li>
-<li><a href="#unixsocket-app-apps.socket.unix">UnixSocket App (apps.socket.unix)</a><ul>
-<li><a href="#configuration-19">Configuration</a></li>
-</ul></li>
 <li><a href="#tap-app-apps.tap.tap">Tap app (apps.tap.tap)</a><ul>
-<li><a href="#configuration-20">Configuration</a></li>
+<li><a href="#configuration-19">Configuration</a></li>
 </ul></li>
 <li><a href="#vlan-apps">VLAN Apps</a><ul>
 <li><a href="#tagger-apps.vlan.vlan">Tagger (apps.vlan.vlan)</a><ul>
-<li><a href="#configuration-21">Configuration</a></li>
+<li><a href="#configuration-20">Configuration</a></li>
 </ul></li>
 <li><a href="#untagger-apps.vlan.vlan">Untagger (apps.vlan.vlan)</a><ul>
-<li><a href="#configuration-22">Configuration</a></li>
+<li><a href="#configuration-21">Configuration</a></li>
 </ul></li>
 <li><a href="#vlanmux-apps.vlan.vlan">VlanMux (apps.vlan.vlan)</a><ul>
-<li><a href="#configuration-23">Configuration</a></li>
+<li><a href="#configuration-22">Configuration</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#bridge-apps">Bridge Apps</a><ul>
-<li><a href="#configuration-24">Configuration</a></li>
+<li><a href="#configuration-23">Configuration</a></li>
 <li><a href="#flooding-bridge-apps.bridge.flooding">Flooding bridge (apps.bridge.flooding)</a><ul>
-<li><a href="#configuration-25">Configuration</a></li>
+<li><a href="#configuration-24">Configuration</a></li>
 </ul></li>
 <li><a href="#learning-bridge-apps.bridge.learning">Learning bridge (apps.bridge.learning)</a><ul>
-<li><a href="#configuration-26">Configuration</a></li>
+<li><a href="#configuration-25">Configuration</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#ipfix-and-netflow-apps">IPFIX and NetFlow apps</a><ul>
 <li><a href="#ipfix-apps.ipfix.ipfix">IPFIX (apps.ipfix.ipfix)</a><ul>
-<li><a href="#configuration-27">Configuration</a></li>
+<li><a href="#configuration-26">Configuration</a></li>
 <li><a href="#to-do-list">To-do list</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#ipsec-apps">IPsec Apps</a><ul>
 <li><a href="#aes128gcm-apps.ipsec.esp">AES128gcm (apps.ipsec.esp)</a><ul>
-<li><a href="#configuration-28">Configuration</a></li>
+<li><a href="#configuration-27">Configuration</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#test-apps">Test Apps</a><ul>
 <li><a href="#match-apps.test.match">Match (apps.test.match)</a><ul>
-<li><a href="#configuration-29">Configuration</a></li>
+<li><a href="#configuration-28">Configuration</a></li>
 </ul></li>
 <li><a href="#synth-apps.test.synth">Synth (apps.test.synth)</a><ul>
-<li><a href="#configuration-30">Configuration</a></li>
+<li><a href="#configuration-29">Configuration</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#snabbwall-apps">SnabbWall Apps</a><ul>
@@ -334,19 +329,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#utilities">Utilities</a><ul>
 <li><a href="#southandnorth-apps.wall.util">SouthAndNorth (apps.wall.util)</a></li>
 </ul></li>
-</ul></li>
-<li><a href="#rss-app-apps.rss.rss">RSS app (apps.rss.rss)</a><ul>
-<li><a href="#flow-director">Flow-director</a></li>
-<li><a href="#packet-replication">Packet replication</a></li>
-<li><a href="#weighted-links">Weighted links</a></li>
-<li><a href="#packet-meta-data">Packet meta-data</a></li>
-<li><a href="#ipv6-extension-header-elimination">IPv6 extension header elimination</a></li>
-<li><a href="#vlan-pseudo-tagging">VLAN pseudo-tagging</a></li>
-<li><a href="#configuration-31">Configuration</a></li>
-<li><a href="#meta-data-api">Meta-data API</a></li>
-</ul></li>
-<li><a href="#inter-process-links-apps.interlink.">Inter-process links (apps.interlink.*)</a><ul>
-<li><a href="#configuration-32">Configuration</a></li>
 </ul></li>
 <li><a href="#libraries">Libraries</a><ul>
 <li><a href="#ip-checksum-lib.checksum">IP checksum (lib.checksum)</a></li>
@@ -1251,38 +1233,21 @@ worker w2: pid=21948 alive=true</code></pre>
 <p><em>Required</em>. The PCI address of the virtio-net device.</p>
 <p>— Key <strong>use_checksum</strong></p>
 <p><em>Optional</em>. Boolean value to enable the checksum offloading pre-calculations applied on IPv4/IPv6 TCP and UDP packets.</p>
-<h1 id="pcap-savefile-apps">Pcap Savefile Apps</h1>
-<h2 id="pcapreader-and-pcapwriter-apps-apps.pcap.pcap">PcapReader and PcapWriter Apps (apps.pcap.pcap)</h2>
+<h1 id="pcapreader-and-pcapwriter-apps-apps.pcap.pcap">PcapReader and PcapWriter Apps (apps.pcap.pcap)</h1>
 <p>The <code>PcapReader</code> and <code>PcapWriter</code> apps can be used to inject and log raw packet data into and out of the app network using the <a href="http://wiki.wireshark.org/Development/LibpcapFileFormat/">Libpcap File Format</a>. <code>PcapReader</code>reads raw packets from a PCAP file and transmits them on its <code>output</code> port while <code>PcapWriter</code> writes packets received on its <code>input</code> port to a PCAP file.</p>
 <div class="figure">
 <img src="data:image/png;base64,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" alt="PcapReader" />
 <p class="caption">PcapReader</p>
 </div>
-<h3 id="configuration-16">Configuration</h3>
+<h2 id="configuration-16">Configuration</h2>
 <p>Both <code>PcapReader</code> and <code>PcapWriter</code> expect a filename string as their configuration arguments to read from and write to respectively. <code>PcapWriter</code> will alternatively accept an array as its configuration argument, with the first element being the filename and the second element being a <em>mode</em> argument to <code>io.open</code>.</p>
-<h2 id="tap-apps.pcap.tap">Tap (apps.pcap.tap)</h2>
-<p>The <code>Tap</code> app is a simple in-band packet tap that writes packets that it sees to a pcap savefile. It can optionally only write packets that pass a pcap filter, and optionally subsample so it can write only every /n/th packet.</p>
-<div class="figure">
-<img src="data:image/png;base64,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" alt="pcaptap" />
-<p class="caption">pcaptap</p>
-</div>
-<h3 id="configuration-17">Configuration</h3>
-<p>The <code>Tap</code> app accepts a table as its configuration argument. The following keys are defined:</p>
-<p>— Key <strong>filename</strong></p>
-<p><em>Required</em>. The name of the file to which to write the packets.</p>
-<p>— Key <strong>mode</strong></p>
-<p><em>Optional</em>. Either <code>&quot;truncate&quot;</code> or <code>&quot;append&quot;</code>, indicating whether the savefile will be truncated (the default) or appended to.</p>
-<p>— Key <strong>filter</strong></p>
-<p><em>Optional</em>. A pflang filter expression to select packets for tapping. Only packets that pass this filter will be sampled for the packet tap.</p>
-<p>— Key <strong>sample</strong></p>
-<p><em>Optional</em>. A sampling period. Defaults to 1, indicating that every packet seen by the tap and passing the optional filter string will be written. Setting this value to 2 will capture every second packet, and so on.</p>
 <h1 id="rawsocket-app-apps.socket.raw">RawSocket App (apps.socket.raw)</h1>
 <p>The <code>RawSocket</code> app is a bridge between Linux network interfaces (<code>eth0</code>, <code>lo</code>, etc.) and a Snabb app network. Packets taken from the <code>rx</code> port are transmitted over the selected interface. Packets received on the interface are put on the <code>tx</code> port.</p>
 <div class="figure">
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAa4AAAB+CAIAAADz3mJWAAALR0lEQVR42u2deWxM7xrHa6et2rdYKhS1pYQgKiEhoRpiqSCxl1jaWBJb/HORCFJbEYmQ2ErtW+rWFkGlvVRIa6+iC6WW6WItdd1vfm/uyWS0uaPV+5sxn88fcs47Z5vnvM/nPO85p8brBwCAx+NFCAAAUCEAgJ0K/w0A4GGgQgAAVAgAgAoBAFAhAAAqBABAhQAAqBAAABUCAKBCAABUCACACgEAUCEAACoEAECFAACoEAAAFQIAoEIAAFQIAIAKAQBQIQAAKgQAQIUAAKgQAAAVAgCgQgAAVAgAgAoBAFAhAAAqBABAhQAAqBAAABVCSQQGBnpBxaM409lQIbguytIfUPEozoWFhR8+fPj8+XNRUVFxcTF9DxUCKvREFWZnZ+fm5tpsNglRNqTvoUJAhZ6ownv37j158uTFixey4adPn+h7qBBQoSeqMDExMSUlRTZ89erV+/fv6XuoEFChJ6owPj5eNrx7925WVlZ+fj59DxUCKvREFR46dOj8+fPJycnp6env3r2j76FCQIWeqMLY2NizZ8/euHHj8ePHqBAVAipEhagQFQIqRIWoEBUCKkSFqBAVAipEhagQFQIqRIWoEBUCKkSFqBAVAipEhagQFQIqRIWoEBUCKkSFqBAVAipEhagQFQIqRIWoEBUCKkSFqBAVAipEhagQFcL/l4ULFzr/nySjQo9SofrG169fy7OFS5cu/eMvbDYbKgRXL/S6det269YtVOhA586d9X0nT57ssSo0fSM1NbXMW5AEzW/4PX36FBV6BO776xOmp9asWTMqKqqCVDh48GDrZy0rV67csGHD0NBQJdhvdEdRUdGqVas6duzo7e3t6+vbpk2b0aNHJycn/y0qnDlzplbs0KHDH6BC0zc2btyIClFhCQwcOFBn19/f/+LFi7psVq1adfHixeaUr169WgsUFxf36dNHs82bN3fxoYH9z+8OGDAgKyurxMWOHDkyZMgQHx+fcePGPXjwoAwqrFSpUp06dapVq2b21axZs2/fvv0uFUZERJjNVqlSpUaNGmZ6x44dbqfCo0ePmjj369dPx+8KKjQMGjSotL5RGj169HD4fWeFNC4uzk0zBRWWqkL111q1apnzGhMTM3XqVE2o5cmTJ9HR0ab9zJkzblEVWtStW1f1iMMykZGRXbp0UZbevn07LCysadOmL1++/FUVNmjQQNPS34QJE8y+Hj58aBZYsWKFtq9d66LSqFEjFXTp6elq37Vrl6lKVPRpVrvW7LRp0zSdl5enAlOzOirNai1Nh4eHf/nyRbO5ubkHDhxISkoy21e+rV27NjAwsHr16n5+fsrqK1euWIf3/fv3rVu3du/eXedO51QJbFa0V6F8JHcbI2gEoFU2bNigBaRd+X348OH37t0zWwsKCnIIqb6Fk4Gyj/OoUaMUsfj4eBdRoekbuiKWU4Vqd9NMQYWlqlDoAv7o0SOd0czMTCVny5Yt1RgcHFy7dm1NTJ8+3V0GyA6o9LMu0fv27VPl+/79e/uMXb58edlUKGbNmmUyIT8/37TIL+3btw8JCRk2bFj9+vX1qUa4X79+zcjIMMdj3GRk1K5dO02b4kKV5ps3b6yPtIWUlBSJz+EApDOzHa1br149Uzyqorc/HqFdG7vpK9urUCe3VatWmtYX+fz5sz6aMWOGZlXhao9mMQlR3UAfTZw4sXHjxsbgvf9Ch+pMlHQ1dYjznDlzVGC6jgoNupI5X76VOEB200xBhaWqUHn4/Plz+/azZ89aPUbJ4xY/VOZVCi1atLh06ZIWUH4mJCTYJ63E1LNnz19VoYq4tm3bGk2oiDt06JC1gNHZ69evZRPVROYArl27psbWrVtrOioqSnWiJlTT6V8VfUuXLtVE165dzRY2b96s02Hd29JIf9u2bWYArmuVaZ8/f75mdVL8/f0127dvX1PumRVHjhxpKkp559mzZ5YKdfABAQGaGDp0qFnAWuXgwYOm5OzYsaNmZ8+eXZ4BcolxVpHoaioUOimmb5T5XqE7ZgoqLFWFymqHdo2bNAozJ3jZsmXl2YWS2etvRaMhjexMPjjc1JMpJMqyPTYxKMPNENiwfft2Dbodljl8+LA+mjJliqZHjBixe/duTSxZskT/Hjt2rF+/fpqYO3eutZHr169rVnI0A2dTv6h9//79ZlYLmCXlLM1qsKxpjaPtzfvzvUKDxnpmkG6/igN9+vQpjwpLjLO3t7eX6+Hr62v6RplV+BszBRW6xGMTh/YtW7ZY3UWdWNdzN60KJWKr76pa0TXcPkV37txZhqpQA2QlwNWrV5VImtUWTE+6c+eOKbLGjBkjy1gxjI2N1ad79uwxVaTGUBq65uTkaOGIiAiVfmo/fvz4z7tTDWX2KNlJLpYKb9y4UQYVmqPVgNrclLR3q4bJS+yIjo4uZ1XoEOcdO3Z06tTJ1apCXYScfxxcmgrdMVNQobMqVJnj4+Oj9vHjxzdv3tx0Go2e3EuFVatW1WjU/sXaEydOqGST/vLy8nSiHzx4oKTdunVrme8Vrly50uxLW9aslGdms7OzNauBs70Ks7KyzGydOnWCg4PVoorS6ElOlCPMNseNG7d3797MzEzZtqCgICQkRAvUrl1bx+/kAHn06NGm7tPXzMjIsL9XOGnSJKPOc+fOqT0tLc1scN26ddZ3vHnzpjW8XbBggbnD8EsqPHnypH2c79+/r7pp0aJFrqNC9Y3Vq1f/0kvXmzZtMuvGxcW5e6agQqdUqAzs37+/eUfEZrOdOnXK9ID169e7kQplmRLftU5MTNQQVUNmLaN0XbNmzS+9B+OgQqW6ueXXq1cvzT58+FA1l7krp7GSFrNXoWjTpo1pWbx4sf1TjqCgIGsXTZo0sdLV+jrh4eE/PzYxj2VKfGyiXSsCqjcdHpvoyw4ZMsS8M6BQ6KNp06aZVeTT0NDQ9u3bmxua1njffKrCsHfv3kaszpCUlGTFuV69etqLWlxEhfKyk+/h26Na234jqpfdN1NQoVMqtK5+GkaZFtUp5jmpUt0tVKii6X++KF6eV6wtFQrrNUzjI6lHvlPZpVFzTEyMgwplNNNy+vRp+/HpvHnzrA1q4bFjxwYEBMhW2o4mtAt9HYeXaapVq6ZSUafv8uXLDi/TqNSVBEt7mebDhw86NmOo1NRUbXDDhg1du3bVmF0lqpSn8bv10rj2q7NvHlWLX30N09VesRaRkZFl/iMCDQJUIJvSWyp030xBhX84Zih34cIFJxfmD4Q96g/v1Dfi4+NJE1T45xMWFub8a2Ko0KNUqL7x+vVrcgQVAirkP+kCVAioEBUCKgRUiAoBFQIqRIWACgEVokJAhYAKUSGgQkCFqBBQIaBCVAioEFAhKgRUCKgQFQIqBFSICgEVAipEhYAKARWiQkCFgApRIaBCQIWoEFAhoEJUCKgQUCEqBFQIqBAVAioEVIgKARUCKkSFgAoBFaJCQIXgFE2bNvWCisfPzw8VokJwafLz8zMzM1NTUxMSEuLi4vZDxaDYKsKKs6KtmNPxUCG4FoWFhTk5OWlpabdu3bp69eo/oWJQbBVhxVnRVszpeKgQXIuPHz++ffs2OztbWZqSkvIvqBgUW0VYcVa0FXM6HioE1+LLly8qUpSfqlYyMjIeQcWg2CrCirOirZjT8VAhuBbfvn1TZqpOKSgosNlsb6BiUGwVYcVZ0VbM6XioEFyR7/+lGCoGK8J0NlQIAIAKAQBQIQAAKgQAQIUAAKgQAAAVAgCgQgAAVAgAgAoBAFAhAAAqBABAhQAAqBAAABUCAKBCAABUCACACgEAUCEAACoEAECFAACoEAAAFQIAoEIAAFQIAPCnqBAAwGNBhQAAqBAA4MeP/wDkMeUoB896eAAAAABJRU5ErkJggg==" alt="RawSocket" />
 <p class="caption">RawSocket</p>
 </div>
-<h2 id="configuration-18">Configuration</h2>
+<h2 id="configuration-17">Configuration</h2>
 <p>The <code>RawSocket</code> app accepts a string as its configuration argument. The string denotes the interface to bridge to.</p>
 <h1 id="unixsocket-app-apps.socket.unix">UnixSocket App (apps.socket.unix)</h1>
 <p>The <code>UnixSocket</code> app provides I/O for a named Unix socket.</p>
@@ -1290,7 +1255,7 @@ worker w2: pid=21948 alive=true</code></pre>
 <img src="data:image/png;base64,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" alt="UnixSocket" />
 <p class="caption">UnixSocket</p>
 </div>
-<h2 id="configuration-19">Configuration</h2>
+<h2 id="configuration-18">Configuration</h2>
 <p>The <code>UnixSocket</code> app takes a string argument which denotes the Unix socket file name to open, or a table with the fields:</p>
 <ul>
 <li><code>filename</code> - the Unix socket file name to open.</li>
@@ -1304,7 +1269,7 @@ worker w2: pid=21948 alive=true</code></pre>
 <img src="data:image/png;base64,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" alt="Tap" />
 <p class="caption">Tap</p>
 </div>
-<h2 id="configuration-20">Configuration</h2>
+<h2 id="configuration-19">Configuration</h2>
 <p>This app accepts either a single string or a table as its configuration argument. A single string is equivalent to the default configuration with the <code>name</code> attribute set to the string.</p>
 <p>— Key <strong>name</strong></p>
 <p><em>Required</em>. The name of the tap device.</p>
@@ -1329,7 +1294,7 @@ ip link set address 02:01:02:03:04:08 dev Tap0</code></pre>
 <p>There are three VLAN related apps, <code>Tagger</code>, <code>Untagger</code> and <code>VlanMux</code>. The <code>Tagger</code> and <code>Untagger</code> apps add or remove a VLAN tag whereas the <code>VlanMux</code> app can multiplex and demultiplex packets to different output ports based on tag.</p>
 <h2 id="tagger-apps.vlan.vlan">Tagger (apps.vlan.vlan)</h2>
 <p>The <code>Tagger</code> app adds a VLAN tag, with the configured value and encapsulation, to packets received on its <code>input</code> port and transmits them on its <code>output</code> port.</p>
-<h3 id="configuration-21">Configuration</h3>
+<h3 id="configuration-20">Configuration</h3>
 <p>— Key <strong>encapsulation</strong></p>
 <p><em>Optional</em>. The Ethertype to use as encapsulation for the VLAN. Permitted values are the strings <em>“dot1q”</em> and <em>“dot1ad”</em> or a number to select an arbitrary Ethertype. <em>“dot1q”</em> and <em>“dot1ad”</em> correspond to the Ethertypes 0x8100 and 0x88a8, respectively, according to the IEEE standards 802.1Q and 802.1ad.</p>
 <p>If a number is given, it is truncated to 16 bits. This feature is intended to allow interoperation with vendors that do not use one of the standard encapsulations (a prominent example being the value 0x9100, which can still be found in practice for double-tagging instead of 0x88a8).</p>
@@ -1338,7 +1303,7 @@ ip link set address 02:01:02:03:04:08 dev Tap0</code></pre>
 <p><em>Required</em>. VLAN tag to add or remove from the packet. The value must be a number in the range 1-4094 (inclusive).</p>
 <h2 id="untagger-apps.vlan.vlan">Untagger (apps.vlan.vlan)</h2>
 <p>The <code>Untagger</code> app checks packets received on its <code>input</code> port for a VLAN tag, removes it if it matches with the configured VLAN tag and transmits them on its <code>output</code> port. Packets with other VLAN tags than the configured tag are dropped.</p>
-<h3 id="configuration-22">Configuration</h3>
+<h3 id="configuration-21">Configuration</h3>
 <p>— Key <strong>encapsulation</strong></p>
 <p><em>Optional</em>. See above.</p>
 <p>— Key <strong>tag</strong></p>
@@ -1350,7 +1315,7 @@ ip link set address 02:01:02:03:04:08 dev Tap0</code></pre>
 <p>If the Ethernet frame is untagged, it is transmitted on the port named <code>native</code> or dropped if no such port exists.</p>
 <p>A packet received on a port named <code>vlan&lt;vid&gt;</code> is tagged with the VLAN ID <code>&lt;vid&gt;</code> according to the configured encapsulation and transmitted on the trunk port.</p>
 <p>A packet received on the port named <code>native</code> is transmitted as is on the trunk port.</p>
-<h3 id="configuration-23">Configuration</h3>
+<h3 id="configuration-22">Configuration</h3>
 <p>— Key <strong>encapsulation</strong></p>
 <p><em>Optional</em>. See above.</p>
 <h1 id="bridge-apps">Bridge Apps</h1>
@@ -1359,7 +1324,7 @@ ip link set address 02:01:02:03:04:08 dev Tap0</code></pre>
 <img src="data:image/png;base64,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" alt="bridge" />
 <p class="caption">bridge</p>
 </div>
-<h2 id="configuration-24">Configuration</h2>
+<h2 id="configuration-23">Configuration</h2>
 <p>A <code>bridge</code> app accepts a table as its configuration argument. The following keys are defined:</p>
 <p>— Key <strong>ports</strong></p>
 <p><em>Optional</em>. An array of free port names. The default is no free ports.</p>
@@ -1369,11 +1334,11 @@ ip link set address 02:01:02:03:04:08 dev Tap0</code></pre>
 <p><em>Optional</em>. The configuration of the actual bridge implementation.</p>
 <h2 id="flooding-bridge-apps.bridge.flooding">Flooding bridge (apps.bridge.flooding)</h2>
 <p>The flooding <code>bridge</code> app implements the simplest possible bridge, which floods a packet arriving on an input port to all output ports within its scope according to the split-horizon topology.</p>
-<h3 id="configuration-25">Configuration</h3>
+<h3 id="configuration-24">Configuration</h3>
 <p>The flooding <code>bridge</code> app ignores the <em>config</em> key of its configuration.</p>
 <h2 id="learning-bridge-apps.bridge.learning">Learning bridge (apps.bridge.learning)</h2>
 <p>The learning <code>bridge</code> app implements a <em>learning bridge</em> using a custom hash table to store the set of MAC source addresses of packets arriving on each input port. When a packet is received it is forwarded to all output ports whose corresponding input ports match the packet’s destination MAC address. When no input port matches, the packet is flooded to all output ports. Multicast MAC addresses are always flooded to all output ports associated with the input port. The scoping rules according to the split-horizon topology apply unchanged.</p>
-<h3 id="configuration-26">Configuration</h3>
+<h3 id="configuration-25">Configuration</h3>
 <p>The learning <code>bridge</code> app accepts a table as the value of the <em>config</em> key of its configuration. The following keys are defined:</p>
 <p>— Key <strong>mac_table</strong></p>
 <p><em>Optional</em>. This is a table that defines the characteristics of the MAC table. The following keys are defined</p>
@@ -1395,7 +1360,7 @@ ip link set address 02:01:02:03:04:08 dev Tap0</code></pre>
 <p class="caption">IPFIX</p>
 </div>
 <p>See the <code>snabb ipfix probe</code> command-line interface for a program built using this app.</p>
-<h3 id="configuration-27">Configuration</h3>
+<h3 id="configuration-26">Configuration</h3>
 <p>The <code>IPFIX</code> app accepts a table as its configuration argument. The following keys are defined:</p>
 <p>— Key <strong>idle_timeout</strong></p>
 <p><em>Optional</em>. Number of seconds after which a flow should be considered idle and available for expiry. The default is 300 seconds.</p>
@@ -1446,7 +1411,7 @@ ip link set address 02:01:02:03:04:08 dev Tap0</code></pre>
 <ul>
 <li><code>lib.ipsec.esp</code></li>
 </ul>
-<h3 id="configuration-28">Configuration</h3>
+<h3 id="configuration-27">Configuration</h3>
 <p>The <code>AES128gcm</code> app accepts a table as its configuration argument. The following keys are defined:</p>
 <p>— Key <strong>spi</strong></p>
 <p><em>Required</em>. A 32 bit integer denoting the “Security Parameters Index” as specified in RFC 4303.</p>
@@ -1475,7 +1440,7 @@ ip link set address 02:01:02:03:04:08 dev Tap0</code></pre>
 </div>
 <p>— Method <strong>Match:errors</strong></p>
 <p>Returns the recorded errors as an array of strings.</p>
-<h3 id="configuration-29">Configuration</h3>
+<h3 id="configuration-28">Configuration</h3>
 <p>The <code>Match</code> app accepts a table as its configuration argument. The following keys are defined:</p>
 <p>— Key <strong>fuzzy</strong></p>
 <p><em>Optional.</em> If this key is <code>true</code> packets from <code>rx</code> that do not match the next packet from <code>comparator</code> are ignored. The default is <code>false</code>.</p>
@@ -1487,7 +1452,7 @@ ip link set address 02:01:02:03:04:08 dev Tap0</code></pre>
 <img src="data:image/png;base64,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" alt="Synth" />
 <p class="caption">Synth</p>
 </div>
-<h3 id="configuration-30">Configuration</h3>
+<h3 id="configuration-29">Configuration</h3>
 <p>The <code>Synth</code> app accepts a table as its configuration argument. The following keys are defined:</p>
 <p>— Key <strong>src</strong></p>
 <p>— Key <strong>dst</strong></p>
@@ -1620,176 +1585,6 @@ DiscardBigPackets <span class="ot">=</span> <span class="fu">setmetatable</span>
 <span class="co">-- Apply the same logic for packets in the other direction.</span>
 DiscardBigPackets<span class="ot">.</span>on_southbound_packet <span class="ot">=</span>
    DiscardBigPackets<span class="ot">.</span>on_northbound_packet</code></pre></div>
-<h1 id="rss-app-apps.rss.rss">RSS app (apps.rss.rss)</h1>
-<p>The <code>rss</code> app implements the basic functionality needed to provide generic <em>receive side scaling</em> to other apps. In essence, the <code>rss</code> app takes packets from an arbitrary number <code>n</code> of input links and distributes them to an arbitrary number <code>m</code> of output links</p>
-<div class="figure">
-<img src="data:image/png;base64,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" alt="rss" />
-<p class="caption">rss</p>
-</div>
-<p>The distribution algorithm has the property that all packets belonging to the same <em>flow</em> are guaranteed to be mapped to the same output link, where a flow is identified by the value of certain fields of the packet header, depending on the type of packet.</p>
-<p>For IPv4 and IPv6, the basic classifier is given by the 3-tuple (<code>source address</code>, <code>destination address</code>, <code>protocol</code>), where <code>protocol</code> is the value of the protocol field of the IPv4 header or the value of the next-header field that identifies the “upper-layer protocol” of the IPv6 header (which may be preceeded by any number of extension headers).</p>
-<p>If the protocol is either TCP (protocol #6), UDP (protocol #17) or SCTP (protocol #132), the list of header fields is augmented by the port numbers to yield the 5-tuple (<code>source address</code>, <code>destination address</code>, <code>protocol</code>, <code>source port</code>, <code>destination port</code>).</p>
-<p>The output link is determined by applying a hash function to the set of header fields</p>
-<pre><code>out_link = ( hash(flow_fields) % m ) + 1</code></pre>
-<p>All other packets are not classified into flows and are always mapped to the first output link.</p>
-<p>The actual scaling property is achieved by running the receivers in separate processes and use specialized inter-process links to connect them to the <code>rss</code> app.</p>
-<p>In addition to this basic functionality, the <code>rss</code> app also implements the following set of extensions.</p>
-<h2 id="flow-director">Flow-director</h2>
-<p>The output links can be grouped into equivalence classes with respect to matching conditions in terms of arbitrary pflang expressions as provided by the <code>pf</code> module. Matching packets are only distributed to the output links that belong to the equivalence class. By default, a single equivalence class exists which matches all packets. It is special in the sense that the matching condition cannot be expressed in pflang. This default class is the only one that can receive non-IP packets.</p>
-<p>Classes are specified in an explicit order when an instance of the <code>rss</code> app is created. The default class is created implicitly as the last element in the list. Each packet is matched against the filter expressions, starting with the first one. If a match is found, the packet is assigned to the corresponding equivalence class and processing of the list stops.</p>
-<p>The default class can be disabled by configuration. In that case, packets not assigned to any class are dropped.</p>
-<h2 id="packet-replication">Packet replication</h2>
-<p>The standard flow-director assigns a packet to at most one class. Any class can also be marked with the attribute <code>continue</code> to allow matches to multiple classes. When a packet is matched to such a class, it is distributed to the set of ouput links associated with that class but processing of the remaining filter expressions continues. If the packet matches a subsequent class, a copy is created and distributed to the corresponding set of output links. Processing stops when the packet matches a class that does not have the <code>continue</code> attribute.</p>
-<h2 id="weighted-links">Weighted links</h2>
-<p>By default, all output links in a class are treated the same. In other words, if the input consists of a sufficiently large sample of random flows, all links will receive about the same share of them. It is possible to introduce a bias for certain links by assigning a <em>weight</em> to them, given by a positive integer <code>w</code>. If the number of links is <code>m</code> and the weight of link <code>i</code> (<code>1 &lt;= i &lt;= m</code>) is <code>w_i</code>, the share of traffic received by it is given by</p>
-<pre><code>share_i = w_i/(w_1 + w_2 + ... + w_m)</code></pre>
-<p>For example, if <code>m = 2</code> and <code>w_1 = 1, w_2 = 2</code>, link #1 will get 1/3 and link #2 will get 2/3 of the traffic.</p>
-<h2 id="packet-meta-data">Packet meta-data</h2>
-<p>In order to compute the hash over the header fields, the <code>rss</code> app must parse the packets to a certain extent. Internally, the result of this analysis is appended as a block of data to the end of the actual packet data. Because this data can be useful to other apps downstream of the <code>rss</code> app, it is exposed as part of the API.</p>
-<p>The meta-data is structured as follows</p>
-<pre><code>   struct {
-      uint16_t magic;
-      uint16_t ethertype;
-      uint16_t vlan;
-      uint16_t total_length;
-      uint8_t *filter_start;
-      uint16_t filter_length;
-      uint8_t *l3;
-      uint8_t *l4;
-      uint16_t filter_offset;
-      uint16_t l3_offset;
-      uint16_t l4_offset;
-      uint8_t  proto;
-      uint8_t  frag_offset;
-      int16_t  length_delta;
-   }</code></pre>
-<ul>
-<li><code>magic</code></li>
-</ul>
-<p>This field contains the constant <code>0x5abb</code> to mark the start of a valid meta-data block. The <strong>get</strong> API function asserts that this value is correct.</p>
-<ul>
-<li><code>ethertype</code></li>
-</ul>
-<p>This is the Ethertype contained in the Ethernet header of the packet. If the frame is of type 802.1q, i.e. the Ethertype is <code>0x8100</code>, the <code>ethertype</code> field is set to the effective Ethertype following the 802.1q header. Only one level of tagging is recognised, i.e. for double-tagged frames, <code>ethertype</code> will contain the value <code>0x8100</code>.</p>
-<ul>
-<li><code>vlan</code></li>
-</ul>
-<p>If the frame contains a 802.1q tag, <code>vlan</code> is set to the value of the <code>VID</code> field of the 802.1q header. Otherwise it is set to 0.</p>
-<ul>
-<li><code>total_length</code></li>
-</ul>
-<p>If <code>ethertype</code> identifies the frame as either a IPv4 or IPv6 packet (i.e. the values <code>0x0800</code> and <code>0x86dd</code>, respectively), <code>total_length</code> is the size of the L3 payload of the Ethernet frame according to the L3 header, including the L3 header itself. For IPv4, this is the value of the header’s <em>Total Length</em> field. For IPv6, it is the sum of the header’s <em>Payload Length</em> field and the size of the basic header (40 bytes).</p>
-<p>For all other values of <code>ethertype</code>, <code>total_length</code> is set to the effective size of the packet (according to the <code>length</code> field of the <code>packet</code> data structure) minus the the size of the Ethernet header (14 bytes for untagged frames and 18 bytes for 802.1q tagged frames).</p>
-<ul>
-<li><code>filter_start</code></li>
-</ul>
-<p>This is a pointer into the packet that can be passed as first argument to a BPF matching function generated by <strong>pf.compile_filter</strong>.</p>
-<p>For untagged frames, this is a pointer to the proper Ethernet header.</p>
-<p>For 802.1q tagged frames, an offset of 4 bytes is added to skip the 802.1q header. The reason for this is that the <code>pf</code> module does not implement the <code>vlan</code> primitive of the standard BPF syntax. The additional 4-byte offset places the effective Ethertype (i.e. the same value as in the <code>ethertype</code> meta-data field) at the position of an untagged Ethernet frame. Note that this makes the original MAC addresses unavailable to the filter.</p>
-<ul>
-<li><code>filter_length</code></li>
-</ul>
-<p>This value is the size of the chunk of data pointed to by <code>filter_start</code> and can be passed as second argument to a BPF matching function generated by <strong>pf.compile_filter</strong>. It is equal to the size of the packet if the frame is untagged or 4 bytes less than that if the frame is 802.1q tagged.</p>
-<ul>
-<li><code>l3</code></li>
-</ul>
-<p>This is a pointer to the start of the L3 header in the packet.</p>
-<ul>
-<li><code>l4</code></li>
-</ul>
-<p>This is a pointer to the start of the L4 header in the packet. For IPv4 and IPv6, it points to the first byte following the L3 header. For all other packets, it is equal to <code>l3</code>.</p>
-<ul>
-<li><code>filter_offset</code>, <code>l3_offset</code>, <code>l4_offset</code></li>
-</ul>
-<p>These values are the offsets of <code>filter_start</code>, <code>l3</code>, and <code>l4</code> relative to the start of the packet. They are used by the <strong>copy</strong> API call to re-calculate the pointers after the meta-data block has been relocated.</p>
-<ul>
-<li><code>proto</code></li>
-</ul>
-<p>For IPv4 and IPv6, the <code>proto</code> field contains the identifier of the <em>upper layer protocol</em> carried in the payload of the packet. For all other packets, its value is undefined.</p>
-<p>For IPv4, the upper layer protocol is given by the value of the <em>Protocol</em> field of the header. For IPv6, it is the value of the <em>Next Header</em> field of the last extension header in the packet’s header chain. The <code>rss</code> app recognizes the following protocol identifiers as extension headers according to the <a href="http://www.iana.org/assignments/ipv6-parameters">IANA ipv6-parameters registry</a></p>
-<ul>
-<li>0 IPv6 Hop-by-Hop Option</li>
-<li>43 Routing Header for IPv6</li>
-<li>44 Fragment Header for IPv6</li>
-<li>51 Authentication Header</li>
-<li>60 Destination Options for IPv6</li>
-<li>135 Mobility Header</li>
-<li>139 Host Identity Protocol</li>
-<li>140 Shim6 Protocol</li>
-</ul>
-<p>Note that the protocols 50 (Encapsulating Security Payload, ESP), 253 and 254 (reserved for experimentation and testing) are treated as upper layer protocols, even though, technically, they are classified as extension headers.</p>
-<ul>
-<li><code>frag_offset</code></li>
-</ul>
-<p>For fragmented IPv4 and IPv6 packets, the <code>frag_offset</code> field contains the offset of the fragment in the original packet’s payload in 8-byte units. A value of zero indicates that the packet is either not fragmented at all or is the initial fragment.</p>
-<p>For non-IP packets, the value is undefined.</p>
-<ul>
-<li><code>length_delta</code></li>
-</ul>
-<p>This field contains the difference of the packet’s effective length (as given by the <code>length</code> field of the packet data structure) and the size of the packet calculated from the IP header, i.e. the sum of <code>l3_offset</code> and <code>total_length</code>. For a regular packet, this difference is zero.</p>
-<p>A negative value indicates that the packet has been truncated. A typical scenario where this is expected to occur is a setup involving a port-mirror that truncates packets either due to explicit configuration or due to a hardware limitation. The <code>length_delta</code> field can be used by a downstream app to determine whether it has received a complete packet.</p>
-<p>A positive value indicates that the packet contains additional data which is not part of the protocol data unit. This is not expected to occur under normal circumstances. However, it has been observed that some devices perform this kind of padding when port-mirroring is configured with packet truncation and the mirrored packet is smaller than the truncation limit.</p>
-<p>For non-IP packets, <code>length_delta</code> is always zero.</p>
-<h2 id="ipv6-extension-header-elimination">IPv6 extension header elimination</h2>
-<p>The <code>pf</code> module does not implement the <code>protochain</code> primitive for IPv6. The only extension header it can deal with is the fragmentation header (protocol 44). As a consequence, packets containing arbitrary extension headers can not be matched against filter expressions.</p>
-<p>To overcome this limitation, the meta-data generator of the <code>rss</code> app removes all extension headers from a packet by default, leaving only the basic IPv6 header followed immediately by the upper layer protocol. The values of the <em>Payload Length</em> and <em>Next Header</em> fields of the basic IPv6 header as well as the packet length are adjusted accordingly.</p>
-<h2 id="vlan-pseudo-tagging">VLAN pseudo-tagging</h2>
-<p>Since the <code>rss</code> app can accept packets from multiple sources, the information on which link the packet was received is not trivially available to receiving apps unless the packets contain a unique identifier of some sort, e.g. a particular VLAN tag. If such an identifier is not available, the <code>rss</code> app can be configured to attach a pseudo VLAN tag to packets arriving on a particular input link. It is called “pseudo tagging” because the VLAN is only added to the packet’s meta-data, not the packet itself. As a consequence, a receiving app only sees this kind of tag when it examines the meta-data provided by the <code>rss</code> app. Such a pseudo-tag also overrides any native VLAN tag that a packet might have.</p>
-<p>The pseudo-tagging is enabled by following a convention for the naming of input links as described below.</p>
-<p>If proper VLAN tagging is required, the <code>vlan.vlan.Tagger</code> app can be pushed between the packet source and the input link.</p>
-<h2 id="configuration-31">Configuration</h2>
-<p>The <code>rss</code> app accepts the following arguments.</p>
-<p>— Key <strong>default_class</strong></p>
-<p><em>Optional</em>. A boolean that specifies whether the default filter class should be enabled. The default is <code>true</code>. The name of the default class is <em>default</em>.</p>
-<p>— Key <strong>classes</strong></p>
-<p><em>Optional</em>. An ordered list of class specifications. Each specification must be a table with the following keys.</p>
-<ul>
-<li><p>Key <strong>name</strong></p>
-<p><em>Required</em>. The name of the class. It must be unique among all classes and it must match the Lua regular expression <code>%w+</code>.</p></li>
-<li><p>Key <strong>filter</strong></p>
-<p><em>Required</em>. A string containing a pflang filter expression.</p></li>
-<li><p>Key <strong>continue</strong></p>
-<p><em>Optional</em>. A boolean that specifies whether processing of classes should continue if a packet has matched the filter of this class. The default is <code>false</code>.</p></li>
-</ul>
-<p>— Key <strong>remove_extension_headers</strong></p>
-<p><em>Optional</em>. A boolean that specifies whether IPv6 extension headers shoud be removed from packets. The default is <code>true</code>.</p>
-<p>The <strong>classes</strong> configuration option specifies the set of classes known to an instance of the <code>rss</code> app. The assignment of links to classes is done implicitly by connecting other apps using the convention <code>&lt;class&gt;_&lt;instance&gt;</code> for the name of the links, where <code>&lt;class&gt;</code> is the name of the class to which the links should be assigned exactly as specified by the <strong>name</strong> parameter of the class definition. The <code>&lt;instance&gt;</code> specifier can be any string (adhering to the naming convention for links) that distinguishes the links within a class.</p>
-<p>If the instance specifier is formatted as <code>&lt;instance&gt;_&lt;weight&gt;</code>, where <code>&lt;instance&gt;</code> is restricted to the pattern <code>%w+</code> and <code>&lt;weight&gt;</code> must be a number, the link’s weight is set to the value <code>&lt;weight&gt;</code>. The default weight for a links is 1.</p>
-<p>If the <code>rss</code> app detects an output link whose name does not match any of the configured classes, it issues a warning message and ignores the link. Classes to which no output links are assigned are ignored.</p>
-<p>The names of the input links are arbitrary unless the VLAN pseudo-tagging feature should be used. In that case, the link must be named <code>vlan&lt;vlan-id&gt;</code>, where <code>&lt;vlan-id&gt;</code> must be a number between 1 and 4094 and will be placed in the <code>&lt;vlan&gt;</code> meta-data field of every packet received on the link (irrespective of whether the packet has a real VLAN ID or not).</p>
-<h2 id="meta-data-api">Meta-data API</h2>
-<p>The meta-data functionality is provided by the module <code>apps.rss.metadata</code> and provides the following API.</p>
-<p>— Function <strong>add</strong> <em>packet</em>, <em>remove_extension_headers</em>, <em>vlan</em></p>
-<p>Analyzes <em>packet</em> and adds a meta-data block starting immediately after the packet data. If the boolean <em>remove_extension_headers</em> is <code>true</code>, IPv6 extension headers are removed from the packet. The optional <em>vlan</em> overrides the value of the <code>vlan</code> meta-data field extracted from the packet, irrespective of whether the packet actually has a tag or not.</p>
-<p>An error is raised if there is not enough room for the mata-data block in the packet.</p>
-<p>— Function <strong>get</strong> <em>packet</em></p>
-<p>Returns a pointer to the meta-data in <em>packet</em>. An error is raised if the meta-data block does not start with the magic number (<code>0x5abb</code>).</p>
-<p>— Function <strong>copy</strong> <em>packet</em></p>
-<p>Creates a copy of <em>packet</em> including the meta-data block. Returns a pointer to the new packet.</p>
-<h1 id="inter-process-links-apps.interlink.">Inter-process links (apps.interlink.*)</h1>
-<p>The “interlink” transmitter and receiver apps allow for efficient exchange of packets between Snabb processes within the same process group (see <a href="#multiprocess-operation-core.worker">Multiprocess operation (core.worker)</a>).</p>
-<div class="figure">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAk4AAACaCAIAAADQC1CyAAAPgElEQVR42u3df0zU9R/AcQo40AP6wSqga+X659JSjzLW+qHp/JEptbrMrVpbm+Ko1q+1/kj6mpW51oxalg7MqVm6miGipqItNU+FRTTTooAUpR8YIoiIHPV9zdd67/O9O07ukPsex/PxR+vz4TiPe929n/fh7ri4fwAAiGlxXAUAAFIHAEBMpO5vAABiCKkDAJA6AABIHQAApA4AAFIHAACpAwCA1AEAQOoAAKQOAABSBwAAqQMAgNQBAEDqAAAgdQAAkDoAAKkjdQAAUgcAAKkDAIDUAQBA6gAAIHUAAJA6AABIHQCA1AEAQOoAACB1AACQOgAASB0AAKQOAABSBwAgdaQOAEDqEClOpzMO0U1mxPSZPkgdwif3pX8Q3WRGra2tp06d6ujo6Ozs9Hq9TJ/pg9SBxS7WFruGhoY//vijublZljxZ75g+0wepA4tdrC12P/zwQ21t7bFjx2S9O336NNNn+iB1YLGLtcVuz5491dXVst79/vvvbW1tTJ/pg9SBxS7WFrvNmzfLenfgwIEjR460tLQwfaYPUgcWu1hb7NauXbt169aKiopffvnlr7/+YvpMH6QOLHaxtth9+umnX3755f79+3/++WdSx/RB6sBix2LH9Jk+SB1Y7FjsmD6pA6kjdSB1IHUgdaQOpA6kDqSO1IHUgdSROpA6kDqQOlIHUsdiR+qYPqkjdWCxY7Fj+kwfpA4sdix2TJ/pg9SROpA6kDqQOlIHUgdSB1JH6kDqQOpIHakjdSB1IHWkLrpNmDBBbnzXXnttxP7FHTt2/Oec5uZmUsdiR+qYPkhdDKZOIhd3Tl1dHaljsSN1TB+krt95PJ7S0tLy8nJSB1IHUodBcVRnNrds2ZKdnZ2cnHzjjTfK7dL/9BLIkSNH2mw2p9O5fv16c4IRI0bICUaPHq2bcoPWsL333nuyefPNN8f9Lzk9qWOxY/pMH6Qu0qlLSkqKj4+XzmmN7HZ7U1OT/wkcDkdCQoJsyn8rKyutqXO5XKQOpA6kjtRFb+pEQUFBd3f3okWLdHPlypU+J1i8eLFsVlVVae1yc3OtqZOkBUwdv8AEqWP6pI7URUXqEhMT29vbZfPgwYOapTfeeMN6Ajng6+rq0j3jxo2TPenp6aQOpA6kjtQNmNQ5HA7drK2t1SxJn6wnyMzMNOfgdrv1NB0dHf6p83g8pA6kDqSO1EXjy1J0U2oUMHUJCQmtra26R59+M0d12dnZ1mfg5GZN6kDqQOpI3cBLncjPzz969GhxcbFumufq5H9k02az1dfXSw5zcnJ8UldYWKh7ysrKSB2LHalj+iB1UZq61HPMqyjj4+PNKzBXrFihO+XILykpaciQIT6p2717t/UVmHl5eaSOxY7pM32QuqhLnZzA4/GMGTNGYuZ0OktKSswZer3egoKCrKwsu93udrvXrVvnkzoxf/58h8Nx0UUXkToWO1LH9EHqoj2N0YbFjtSB1IHUkTqQOpA6kLrBnbr09PS4nh06dCjKlxIzIN386quv9HMkTpw4YU4TcCep64vHH3/cejtJTU297bbbPvnkk/6YKakDqRvsSJ3Psmje2lFfX29OE3AnqbuAqTPWrl1L6kgdqUPUpW779u2bz3n11Vd1tZoxY8bmf506dcr/Wzo6OqJnKdm7d++GDRvkp+jv1IX9U8d26lavXi0jyMvL082JEyde8JlG0gW/bZM6Uoc++eyzz6ZMmWK322fOnHlBjr1kcdHV6qWXXgr4EFuWntGjRyckJMhdt7i4+Pbbb7/qqqtsNltKSkpOTs7KlSv9v2Xr1q3m8yK2bNliTlBdXT19+nT9dvnvXXfdVVRUpF8aO3asfu/OnTtHjRo1ZMiQyZMnHzt27MCBA3feeefQoUNdLteuXbsCHgEE/OPaAXfq90rLx48fn5aWlpSUdNNNNy1ZsiT4T03q/FNXUVEhm+3t7bp5ww03WE8W5BrWXyxPnTr18ssvl5uBXNVPP/10T0d1PZ3PnDlz5JRyIzGPyb7++mu9JB999FEkp+zv888/13voHXfcITdvUkfqELKnnnpK4iH3paqqKrfbnZGR8dtvv/Vr6uQea94yKA/kH3nkEf3ToPJPx8fH637zVE1Pnxdx/Phx+WpnZ6d8l74TMTMzU/989oMPPmhNXWpqqhTUxElSKkU0m+np6WZpCzt1y5Yt07d/yM912WWX6ZdeeOGFID81qespdWfOnNErc9y4ceY0wa9heWykXzWuvvrqgKkLcj7mTavmF6fSS71lnjx5MpJT9mG9hz7wwANyi5XikjpShxCsWrVKHoG2tbVZ71fz5s3r19QJeYhaU1NTV1d35MiRjRs3/vjjj3oCqazD4ZATyFGXz7cUFBTIBX7nnXd0Uy65fFWOz6yrpNfr3bdvnywK1tSJWbNmycHfrbfeqpvyI1dWVspPqptyafvyXJ2U8tJLL5U9kyZN0r/0/cwzz8jmxRdfXFtb29NPTer8U1deXi7H3OYaXrp0aW+uYdmj4ZHGyCOkEydOHDp0aOHChf4zPe+khg0bJpsPPfSQLk16U5wxY0aEp2z18ccf+9xD8/Pz8/LySB2pQwjkXmT9DZ7weDy33HJLv6ZOHhrLimZ2ypGZPCp/8sknH374YTkg06M0OfCyfktiYuLp06dlU1YxPecFCxbIZlNTk6w1spmdnf3888/L425ZAsw5a+r0j47KpsRSv1dbKHXUzQ8++KAvqdu+fbv5hduEc1wul/UXXwF/alIX5GUpNptNhmV9DjjINWy+Ku0J/rKU807q5Zdf1iMzubHt2bNHv1RaWhrhKVsFvIfKQR6pI3UDnn6yT8R0dXVZ70iygsuD2X5N3ZVXXmn2yL8+fvx4/0t1ySWXWL/FXCTr36DRPW+99ZasjNbvleZZU5eVlaWbb775pp5AjvBk87vvvtNNOVLsS+rWrFnT03X79ttvB/ypSd15X4E5c+ZMc8sMfg2br5qHLD2l7ryTMg+k5MGQ3Ir099tnz56N8JR9Ju5/Dx06dGgklwhZkViWSd2AP6qTddN6RyouLu7vozrrawTMY+fZs2frMyJaPp/UmW+R+7lP6oSs+PIvSvPkkutX9elG87IUn9TpS2+qqqqCp27evHn+qfPfWV5ebv5+W3+/3j3mn6v7888/p02bZj1wP+813PujuvNOSuini0hor7vuOv3L7JGfss9Rnc89tKioaPjw4RzVkTqE4IsvvsjIyJC86RuipQFy13r//fcjlrrS0lLzWe2yefjwYbvd3vvUtbS0FBYWmtfRfPjhh9aY9TF17777rp5g48aN5gL77zTP4gwbNkyftpGH4bL+Tp06VS4eqQv1ZSlNTU1paWl6G9CbZfBr2PpcnVw5sqempkYe9wR5rq6nSYlFixbpL731IslDschP2aqkpMR6Dz148KDT6XzxxRdJHalDaOTOfP/99+vdWO5UCxcu9PmFSb+mTh7F67omF0AuxhVXXKG/nOll6iRyupmSkqJP8onrr7++u7u776n75ptvfD5Hoqedy5cv19fmyX/lYpjX4OnyROpCSp2YO3euz7F78Gu496/ADH4+eosyLwOWG5L1ckZsyj48Ho+5h0rUn3jiCdlD6kgd/v+LXe9Tp++IcrlcycnJ8nhZDijvvffe3qdOHmvPmTNn1KhRsgTYbDaHw/HYY4/V1dX5vK8uvNSJ1157zfo5EkF2btu2bdKkSbIeycW45ppr7rnnHjnE9Hq9pC6M1Ek85AZgPbALfg3rrUj2yM0gMTEx+Pvqgp+PmDhxol6eV155xeeiRmbKvIWc1GFgpA4DbrFj+oN5+iB1pA6kDqQOpI7UgdRhsKZux44d+lkfzc3N0X+2pA4sdqQOpC5k5p2mdXV10X+2pA4sdqQOpI7UkTpSB1KHWJz+pk2b7r77bv3EhuHDhy9YsODs2bP6pREjRuifjdVN+afNW+llM+AfQP/b8jHUpaWlI0eOtNlsTqdz/fr15l8M72xJHVjsWOyYPtMPR1FRkc+7EsV9991nbZLL5QojdfqBJA6HQ9+SL/+trKzsy9mSOrDYsdgxfaYfsra2Nn0LY2ZmppxtY2Pj5MmTtS5yqGeaJO0J2KSeftNoPudh8eLFsllVVaW1y83NtaYu1LMldWCxY7Fj+kw/ZNu2bdOizJ07V/d4PB7d89xzz/UxdcnJyV1dXbpH/4p9eno6qQOpA6lDRKcvZ6hFWbJkie5paGjQPY8++qh/k0wIe5M6OVI0e9xut56so6Mj7LMldWCxY7Fj+kz/Qh7VPfvss7KpH/VgniozaexN6vSjInWPPv1mjurCO1tSBxY7Fjumz/T79FxdRUVFY2PjlClTzGd3yAlyc3P1w3Lr6+ulWzk5OT5NKiws1D1lZWX+z9Xl5+cfPXq0uLhYN81zdeGdLakDix2LHdNn+uFYunSp/8exTps2rbu7W766YsUK3SOHaElJSebzHEyTdu/e7fNZHyZ1qeeYL8XHx5tXYIZ3tqQOLHYsdkyf6Ydpw4YNY8eOTUlJ0TfAvf76652dnfolr9dbUFCQlZVlt9vdbve6det8miTmz59v/ayPvy3vq/N4PGPGjJGYydmWlJSYbwnvbEkdWOxY7Jg+048WJnWDcy0ldaQOpA6kjtSB1IHUgdSROpA6FjtSx/T5vDpSBxY7Fjumz/RB6sBix2LH9Jk+SB2pA6kDqQOpI3UgdSB1IHWkDqQOpI7UgdSB1IHUkTqQOpA6pk/qSB1Y7FjsmD7TB6kDix2LHdNn+iB1pA6kDqQOpI7UgdSB1IHUkTqQOpA6UkfqSB1IHUgdqQOpA6kDqSN1IHUsdkyf6YPUgcWOxY7pM32QOrDYsdgxfVIHUkfqQOpA6kDqSB1IHUgdSF3Uy8jIiEN0S0tL66fFjukP5umD1A0uLS0thw8f/v7773ft2lVWVrYa0UfmItORGcmkZF5Mn+mD1CE0ra2tjY2NNTU133777c6dOzch+shcZDoyI5mUzIvpM32QOoSmvb39+PHjDQ0Ncl+qrq7ei+gjc5HpyIxkUjIvps/0QeoQmjNnzshDRbkXyWPGX3/99SdEH5mLTEdmJJOSeTF9pg9Sh9B0dXXJ/UceLZ48ebK5ubkJ0UfmItORGcmkZF5Mn+mD1CEc3f/yIvqY6TB9pg9SBwAAqQMAgNQBAEDqAAAgdQAAUgcAAKkDAIDUAQBA6gAAIHUAAJA6AABIHQCA1JE6AACpAwCA1AEAQOoAACB1AACQOgAASB0AAKQOAEDqAAAgdQAAkDoAAEgdAACkDgCAC5E6AABiEqkDAJA6AAAGsv8CDkV+JFPt9r4AAAAASUVORK5CYII=" alt="Transmitter" />
-<p class="caption">Transmitter</p>
-</div>
-<p>To make packets from an output port available to other processes, configure a transmitter app, and link the appropriate output port to its <code>input</code> port.</p>
-<div class="sourceCode"><pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> Transmitter <span class="ot">=</span> <span class="fu">require</span><span class="ot">(</span><span class="st">&quot;apps.interlink.transmitter&quot;</span><span class="ot">)</span>
-
-config<span class="ot">.</span>app<span class="ot">(</span>c<span class="ot">,</span> <span class="st">&quot;interlink&quot;</span><span class="ot">,</span> Transmitter<span class="ot">)</span>
-config<span class="ot">.</span>link<span class="ot">(</span>c<span class="ot">,</span> <span class="st">&quot;myapp.output -&gt; interlink.input&quot;</span><span class="ot">)</span></code></pre></div>
-<p>Then, in the process that should receive the packets, configure a receiver app with the same name, and link its <code>output</code> port as suitable.</p>
-<div class="sourceCode"><pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> Receiver <span class="ot">=</span> <span class="fu">require</span><span class="ot">(</span><span class="st">&quot;apps.interlink.receiver&quot;</span><span class="ot">)</span>
-
-config<span class="ot">.</span>app<span class="ot">(</span>c<span class="ot">,</span> <span class="st">&quot;interlink&quot;</span><span class="ot">,</span> Receiver<span class="ot">)</span>
-config<span class="ot">.</span>link<span class="ot">(</span>c<span class="ot">,</span> <span class="st">&quot;interlink.output -&gt; otherapp.input&quot;</span><span class="ot">)</span></code></pre></div>
-<p>Subsequently, packets transmitted to the transmitter’s <code>input</code> port will appear on the receiver’s <code>output</code> port.</p>
-<p>Alternatively, a name can be supplied as a configuration argument to be used instead of the app’s name:</p>
-<div class="sourceCode"><pre class="sourceCode lua"><code class="sourceCode lua">config<span class="ot">.</span>app<span class="ot">(</span>c<span class="ot">,</span> <span class="st">&quot;mylink&quot;</span><span class="ot">,</span> Receiver<span class="ot">,</span> <span class="st">&quot;interlink&quot;</span><span class="ot">)</span>
-config<span class="ot">.</span>link<span class="ot">(</span>c<span class="ot">,</span> <span class="st">&quot;mylink.output -&gt; otherapp.input&quot;</span><span class="ot">)</span></code></pre></div>
-<h2 id="configuration-32">Configuration</h2>
-<p>The configured app names denote globally unique queues within the process group. Alternativelyy, the receiver and transmitter apps can instead be passed a string that names the shared queue to which to attach to.</p>
-<p>Starting either the transmitter or receiver app attaches them to a shared packet queue visible to the process group under the name that was given to the app. When the queue identified by the name is unavailable, because it is already in use by a pair of processes within the group, configuration of the app network will block until the queue becomes available. Once the transmitter or receiver apps are stopped they detach from the queue.</p>
-<p>Only two processes (one receiver and one transmitter) can be attached to an interlink queue at the same time, but during the lifetime of the queue (e.g., from when the first process attached to when the last process detaches) it can be shared by any number of receivers and transmitters. Meaning, either process attached to the queue can be restarted or replaced by another process without packet loss.</p>
 <h1 id="libraries">Libraries</h1>
 <h3 id="ip-checksum-lib.checksum">IP checksum (lib.checksum)</h3>
 <p>The checksum module provides an optimized ones-complement checksum routine.</p>
